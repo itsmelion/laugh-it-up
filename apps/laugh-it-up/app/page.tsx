@@ -1,3 +1,5 @@
+import { Button } from '@laugh-it-up/components';
+
 export default async function Index() {
   /*
    * Replace the elements below with your own.
@@ -12,6 +14,8 @@ export default async function Index() {
             <span> Hello there, </span>
             Welcome laugh-it-up 👋
           </h1>
+
+          <Button title='Funny' />
         </section>
       </div>
     </div>

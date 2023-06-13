@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@laugh-it-up/components": ["libs/components/src/index.ts"],
       "@laugh-it-up/services": ["libs/services/src/index.ts"]
     }
   },

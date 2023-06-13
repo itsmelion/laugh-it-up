@@ -12,6 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/html5-reset/assets/css/reset.min.css" /> */}
       <body>
         {children}
       </body>
