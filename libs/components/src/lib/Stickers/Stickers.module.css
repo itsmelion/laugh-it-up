@@ -1,0 +1,10 @@
+.stickersSection {
+  position: relative;
+  height: 13rem;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

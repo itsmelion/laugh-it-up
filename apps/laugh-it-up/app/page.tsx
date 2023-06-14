@@ -1,21 +1,28 @@
-import { Button } from '@laugh-it-up/components';
+import { Button, Card, Header, Reviews, Stickers } from '@laugh-it-up/components';
+
+const reviews = [
+  {
+    content: "It's good. There are many cool stickers!",
+    author: "Fikri Aziz",
+    rate: 4
+  }
+];
 
 export default async function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.@emotion/styled file.
-   */
   return (
     <div className="wrapper">
       <div className="container">
         <section id="welcome">
-          <h1>
-            <span> Hello there, </span>
-            Welcome laugh-it-up 👋
-          </h1>
+          <Header />
+
+          <Card>
+            <h1>Hello</h1>
+          </Card>
 
           <Button title='Funny' />
+          <Stickers />
+
+          <Reviews reviews={reviews} />
         </section>
       </div>
     </div>

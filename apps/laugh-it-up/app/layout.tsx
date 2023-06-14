@@ -1,4 +1,15 @@
+import './reset.css';
 import './global.css';
+import { Roboto } from 'next/font/google'
+
+import { Footer } from '@laugh-it-up/components';
+
+const roboto = Roboto({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+  variable: '--font',
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Welcome to laugh-it-up',
@@ -11,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/* <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/html5-reset/assets/css/reset.min.css" /> */}
+    <html lang="en" className={roboto.className}>
       <body>
         {children}
+        <Footer />
       </body>
     </html>
   );

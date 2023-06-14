@@ -1,0 +1,33 @@
+.card {
+  color: white;
+  background-color: #319379;
+  padding: 1.25rem 1.5rem;
+  box-shadow: rgba(0,0,0,0.3) 0 0.3rem 0.6rem;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviewWrapper {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.avatar {
+  display: block;
+}
+
+.content { }
+
+.rateWrapper {
+  flex: none;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.author {
+  font-weight: 700;
+}
