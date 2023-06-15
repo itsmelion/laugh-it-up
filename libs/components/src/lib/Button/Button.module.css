@@ -3,6 +3,25 @@
   color: white;
   background-color: transparent;
   cursor: pointer;
+  width: 100%;
+}
+
+.button:disabled {
+  color: #DDDDDD;
+}
+
+.button:disabled .fire-gradient {
+  background: linear-gradient(
+    180deg,
+    rgb(195, 197, 189) 0%,
+    rgb(167, 166, 157) 20%,
+    rgb(110, 106, 102) 33%,
+    rgb(117, 117, 117) 46%
+  );
+}
+
+.button:disabled .inner-button {
+  text-shadow: rgba(0,0,0, 0.6) 0 0.3em 0.6rem;
 }
 
 .fire-gradient {
@@ -20,7 +39,7 @@
   );
   border: 0.25em solid white;
   border-radius: 2em;
-  box-shadow: rgba(0,0,0,0.7) 0 0.05em 0.25em;
+  box-shadow: rgba(0,0,0,0.4) 0 0.05em 0.25em;
 }
 
 .bezel-reflection {

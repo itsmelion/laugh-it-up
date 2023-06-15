@@ -1,0 +1,25 @@
+.wrapper {
+  border: #707070 solid 0.1em;
+  border-radius: 2em;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  background-color: #EAEAEA;
+  flex-direction: row;
+  font-size: 2.0rem;
+  align-items: center;
+  padding-left: 0.8em;
+}
+
+.phoneIcon {
+  margin-right: 0.5em;
+  pointer-events: none;
+}
+
+.input {
+  appearance: none;
+  background-color: transparent;
+  flex: 1;
+  padding: 0.3em 1em 0.3em 0;
+  outline: none;
+}

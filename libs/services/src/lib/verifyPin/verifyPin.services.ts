@@ -18,7 +18,7 @@ type PayloadDTO = {
   country: string;
 }
 
-export async function verifyPhone(payload: PayloadDTO) {
+export async function verifyPin(payload: PayloadDTO) {
   const response = await fetch(`${HOST}/${VERSION}/trigger-pin`, {
     body: JSON.stringify(payload),
     method: 'POST',
@@ -35,6 +35,6 @@ export async function verifyPhone(payload: PayloadDTO) {
   return response;
 }
 
-export function useVerifyPhone() {
-  return useAsyncCallback(verifyPhone);
+export function useVerifyPin() {
+  return useAsyncCallback(verifyPin);
 }

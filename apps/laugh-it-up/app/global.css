@@ -1,3 +1,7 @@
+:root {
+  --primary: #59BBA6;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -7,14 +11,14 @@ html {
   font-size: 10px;
   tab-size: 2;
   scroll-behavior: smooth;
-  background-color: #59BBA6;
+  background-color: var(--primary);
 }
 body {
   font-family: inherit;
   line-height: inherit;
   font-size: 100%;
   margin: 0;
-  background-color: #59BBA6;
+  background-color: var(--primary);
 }
 h1,
 h2,
@@ -71,4 +75,56 @@ pre {
   padding-right: 1rem;
   color: rgba(55, 65, 81, 1);
   width: 100%;
+}
+
+h1 {
+   font-size: 1.8rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-bold, .text-700 b {
+  font-weight: 700;
+}
+
+.text-medium, .text-500 b {
+  font-weight: 500;
+}
+
+.text-900, b {
+  font-weight: 900;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  color: var(--primary);
+}
+
+p, .text-md {
+  font-size: 1.2rem;
+}
+
+.text-sm {
+  font-size: 1rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.form-error-message {
+  color: #FA3333;
 }

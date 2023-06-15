@@ -8,9 +8,10 @@ export function Stickers() {
   return (
     <section className={styles.stickersSection}>
       <Image
+        className={styles.stickersImage}
         src={stickersBitmap}
         alt='stickers demo'
-        fill
+        height={140}
       />
 
       <Image

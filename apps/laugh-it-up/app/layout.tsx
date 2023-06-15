@@ -5,7 +5,7 @@ import { Roboto } from 'next/font/google'
 import { Footer } from '@laugh-it-up/components';
 
 const roboto = Roboto({
-  weight: ['400', '700', '900'],
+  weight: ['400', '500', '700', '900'],
   subsets: ['latin'],
   variable: '--font',
   display: 'swap',

@@ -47,8 +47,9 @@ const Stars = memo((props: { rate: number }) => {
   return (
     <span className={styles.rateWrapper}>
       {new Array(rate).fill(null)
-        .map(() => (
+        .map((_, i) => (
           <Image
+            key={i}
             width={11}
             height={11}
             alt='star rating'
