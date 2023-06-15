@@ -2,22 +2,21 @@
 import { ErrorMessage } from '@hookform/error-message';
 import { PinInput, Button } from '@laugh-it-up/components';
 import { useVerifyPin } from '@laugh-it-up/services';
-import { Controller, Form, useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 export function PinVerification() {
   const verifyPin = useVerifyPin();
   const form = useForm<{ pin: string }>();
 
   return (
-    <Form
-      control={form.control}
-      onSubmit={({ data }) => {
+    <form
+      onSubmit={form.handleSubmit((data) => {
         return verifyPin.execute({
           pin: data.pin,
           user_id: 'UUID-CHRIS-LION',
           country: 'NL',
         });
-      }}
+      })}
     >
       <Controller
         name='pin'
@@ -38,6 +37,6 @@ export function PinVerification() {
         type='submit'
         disabled={verifyPin.loading || form.formState.isDirty && !form.formState.isValid}
       />
-    </Form>
+    </form>
   );
 }

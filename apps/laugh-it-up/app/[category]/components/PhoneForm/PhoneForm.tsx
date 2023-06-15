@@ -2,7 +2,7 @@
 
 import { Button, PhoneInput } from '@laugh-it-up/components';
 import { useTriggerPin } from '@laugh-it-up/services';
-import { Controller, Form, useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { parsePhoneNumber, ParseError } from 'libphonenumber-js';
 import { ErrorMessage } from '@hookform/error-message';
 
@@ -16,8 +16,8 @@ export const PhoneForm = () => {
   const params = useParams();
 
   return (
-    <Form
-      onSubmit={async ({ data }) => {
+    <form
+      onSubmit={form.handleSubmit(async (data) => {
         const { phone } = data;
         const number = parsePhoneNumber(phone);
 
@@ -28,10 +28,8 @@ export const PhoneForm = () => {
         });
 
         route.push(`/${params.category}/verify`);
-      }}
-      onSuccess={() => route.push('/verify')}
-      className={styles.wrapper}
-      control={form.control}>
+      })}
+      className={styles.wrapper}>
       <p>Enter your number to get all the sticker packs.</p>
 
       <Controller
@@ -70,6 +68,6 @@ export const PhoneForm = () => {
         title='Submit to Subscribe'
         disabled={verifyPhoneRequest.loading}
       />
-    </Form>
+    </form>
   )
 }
