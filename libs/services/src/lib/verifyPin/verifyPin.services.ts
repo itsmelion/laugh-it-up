@@ -19,7 +19,7 @@ type PayloadDTO = {
 }
 
 export async function verifyPin(payload: PayloadDTO) {
-  const response = await fetch(`${HOST}/${VERSION}/trigger-pin`, {
+  const response = await fetch(`${HOST}/${VERSION}/verify-pin`, {
     body: JSON.stringify(payload),
     method: 'POST',
     mode: "cors",

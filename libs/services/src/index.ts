@@ -1,1 +1,2 @@
-export * from './lib/verifyPhone/verifyPhone.services';
+export * from './lib/triggerPin/triggerPin.services';
+export * from './lib/verifyPin/verifyPin.services';

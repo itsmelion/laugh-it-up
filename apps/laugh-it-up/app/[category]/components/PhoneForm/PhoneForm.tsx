@@ -1,17 +1,17 @@
 'use client'
 
-import { Button, PhoneInput } from '@laugh-it-up/components'
-import { useVerifyPhone } from '@laugh-it-up/services'
-import { Controller, Form, useForm } from 'react-hook-form'
-import { parsePhoneNumber, ParseError } from 'libphonenumber-js'
-import { ErrorMessage } from '@hookform/error-message'
+import { Button, PhoneInput } from '@laugh-it-up/components';
+import { useTriggerPin } from '@laugh-it-up/services';
+import { Controller, Form, useForm } from 'react-hook-form';
+import { parsePhoneNumber, ParseError } from 'libphonenumber-js';
+import { ErrorMessage } from '@hookform/error-message';
 
-import styles from './PhoneForm.module.css'
+import styles from './PhoneForm.module.css';
 import { useParams, useRouter } from 'next/navigation';
 
 export const PhoneForm = () => {
   const form = useForm<{ phone: string }>();
-  const verifyPhoneRequest = useVerifyPhone();
+  const verifyPhoneRequest = useTriggerPin();
   const route = useRouter();
   const params = useParams();
 
@@ -22,15 +22,16 @@ export const PhoneForm = () => {
         const number = parsePhoneNumber(phone);
 
         await verifyPhoneRequest.execute({
-          msisnd: number.formatInternational(),
+          msisdn: number.formatInternational(),
           user_id: 'UUID-CHRIS-LION',
-          country: number.country,
+          country: number.country || 'NL',
         });
 
         route.push(`/${params.category}/verify`);
       }}
       onSuccess={() => route.push('/verify')}
-      className={styles.wrapper} control={form.control}>
+      className={styles.wrapper}
+      control={form.control}>
       <p>Enter your number to get all the sticker packs.</p>
 
       <Controller

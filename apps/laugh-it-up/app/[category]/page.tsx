@@ -1,6 +1,12 @@
 import { Card, Header, Reviews, Stickers } from '@laugh-it-up/components';
 import { CuteMonsters, MonstersOffset } from './components/CuteMonsters';
-import { PhoneForm } from './components/PhoneForm/PhoneForm';
+import dynamic from 'next/dynamic'
+
+const PhoneForm = dynamic(() =>
+  import('./components/PhoneForm/PhoneForm')
+    .then(({ PhoneForm: component }) => ({ default: component })),
+  { ssr: true }
+);
 
 const reviews = [
   {
@@ -20,7 +26,7 @@ export default async function Index() {
           <Card>
             <CuteMonsters />
 
-            <PhoneForm/>
+            <PhoneForm />
           </Card>
 
           <Stickers />

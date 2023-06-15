@@ -5,20 +5,22 @@ const VERSION = 'v1'
 
 type ResponseDTO = {
   success: boolean;
-  user_id: string;
+  User_id: string;
+  pin:string;
+  msisdn: string;
   product_url: string;
 }
 
 type PayloadDTO = {
-  /* 4 digits */
-  pin: string;
+  /* valid phone number */
+  msisdn: string;
   // UUID
   user_id: string;
   // string: 2 letters code
   country: string;
 }
 
-export async function verifyPhone(payload: PayloadDTO) {
+export async function triggerPin(payload: PayloadDTO) {
   const response = await fetch(`${HOST}/${VERSION}/trigger-pin`, {
     body: JSON.stringify(payload),
     method: 'POST',
@@ -28,13 +30,13 @@ export async function verifyPhone(payload: PayloadDTO) {
     },
   })
     .then(response => {
-      if (!response.ok) throw new Error('Error. Maybe wrong pin?');
-      return response.json() as Promise<ResponseDTO>
+      if (!response.ok) throw new Error('Error. Maybe wrong phone input?');
+      return response.json() as Promise<ResponseDTO>;
     });
 
   return response;
 }
 
-export function useVerifyPhone() {
-  return useAsyncCallback(verifyPhone);
+export function useTriggerPin() {
+  return useAsyncCallback(triggerPin);
 }
