@@ -1,4 +1,4 @@
-import { Card, Header, Reviews, Stickers } from '@laugh-it-up/components';
+import { Card, FadeIn, Header, Reviews, Stickers } from '@laugh-it-up/components';
 import { CuteMonsters, MonstersOffset } from './components/CuteMonsters';
 import dynamic from 'next/dynamic'
 
@@ -22,12 +22,15 @@ export default async function Index() {
       <div className="container">
         <section id="welcome">
           <Header />
-          {MonstersOffset}
-          <Card>
-            <CuteMonsters />
 
-            <PhoneForm />
-          </Card>
+          <FadeIn>
+            {MonstersOffset}
+            <Card>
+              <CuteMonsters />
+
+              <PhoneForm />
+            </Card>
+          </FadeIn>
 
           <Stickers />
 

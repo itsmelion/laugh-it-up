@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { memo } from 'react';
 
+import styles from './Reviews.module.css'
 import starVector from './star.svg';
 import reviewAuthorBitmap from './author.png';
-import styles from './Reviews.module.css'
 
 type Review = {
   content: string;
@@ -20,8 +20,8 @@ export function Reviews(props:ReviewsProps) {
 
   return (
     <section>
-      {reviews.map(review => (
-        <article className={styles.card}>
+      {reviews.map((review, i) => (
+        <article className={styles.card} key={i}>
           <Image
             src={reviewAuthorBitmap}
             className={styles.avatar}

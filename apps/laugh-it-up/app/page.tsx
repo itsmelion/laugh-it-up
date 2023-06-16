@@ -1,4 +1,4 @@
-import { Button, Card, Header, Reviews, Stickers } from '@laugh-it-up/components';
+import { Button, Card, FadeIn, Header, Reviews, Stickers } from '@laugh-it-up/components';
 import Link from 'next/link';
 
 import { CuteMonster, CuteMostersOffset } from './components/CuteMonster';
@@ -18,24 +18,27 @@ export default async function Index() {
         <section id="welcome">
           <Header />
 
-          {CuteMostersOffset}
-          <Card>
-            <CuteMonster/>
-            <h1 className='mt-1'>
-              Express your self with<br/>
-              <b className='text-900'>New <span className='color-primary'>WhatsApp Stickers</span></b>
-            </h1>
+          <FadeIn>
+            {CuteMostersOffset}
+            <Card>
+              <CuteMonster/>
+              <h1 className='mt-1'>
+                Express your self with<br/>
+                <b className='text-900'>New <span className='color-primary'>WhatsApp Stickers</span></b>
+              </h1>
 
-            <p>Choose your sticker type:</p>
+              <p>Choose your sticker type:</p>
 
-            <Link href={'/funny'}>
-              <Button title='Funny' />
-            </Link>
+              <Link href={'/funny'}>
+                <Button title='Funny' />
+              </Link>
 
-            <Link href={'/romance'}>
-              <Button title='Romance' />
-            </Link>
-          </Card>
+              <Link href={'/romance'}>
+                <Button title='Romance' />
+              </Link>
+            </Card>
+          </FadeIn>
+
 
           <Stickers />
 

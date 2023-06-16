@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Card, Header, Reviews, Stickers } from '@laugh-it-up/components';
+import { Card, FadeIn, Header, Reviews, Stickers } from '@laugh-it-up/components';
 
 import funnyMonsterBitmap from './grateful-monster.png';
 import styles from './thankYou.module.css';
@@ -21,20 +21,22 @@ export default async function Index() {
           <Header />
 
           <div style={{ marginTop: 65 }} />
-          <Card>
-            <div className={styles['card-wrapper']}>
-              <Image
-                src={funnyMonsterBitmap}
-                alt='grateful monster bidding farewell'
-                style={{ marginTop: -120 }}
-                width={127}
-                height={152}
-              />
+          <FadeIn>
+            <Card>
+              <div className={styles['card-wrapper']}>
+                <Image
+                  src={funnyMonsterBitmap}
+                  alt='grateful monster bidding farewell'
+                  style={{ marginTop: -120 }}
+                  width={127}
+                  height={152}
+                />
 
-              <h1 className='mt-1 text-medium'>Thank You!</h1>
-              <p>Now you can express your emotions with the amazing stickers. Have fun!</p>
-            </div>
-          </Card>
+                <h1 className='mt-1 text-medium'>Thank You!</h1>
+                <p>Now you can express your emotions with the amazing stickers. Have fun!</p>
+              </div>
+            </Card>
+          </FadeIn>
 
           <Stickers />
 

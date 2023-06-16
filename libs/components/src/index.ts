@@ -10,3 +10,6 @@ export * from './lib/Footer/Footer';
 export * from './lib/Reviews/Reviews';
 export * from './lib/Stickers/Stickers';
 export * from './lib/DynamicBackground/DynamicBackground';
+
+// Utils
+export * from './lib/FadeIn';

@@ -1,4 +1,4 @@
-import { Card, Header, Reviews, Stickers } from '@laugh-it-up/components';
+import { Card, FadeIn, Header, Reviews, Stickers } from '@laugh-it-up/components';
 import Image from 'next/image';
 
 import peekyMonster from './peeky-monster.png';
@@ -19,24 +19,26 @@ export default async function Index() {
         <section id="welcome">
           <Header />
 
-          <div style={{ textAlign: 'center'  }}>
-            <Image
-              style={{ marginTop: 50, marginBottom: -65  }}
-              src={peekyMonster}
-              width={118}
-              height={132}
-              alt='peeky monster'
-            />
-          </div>
+          <FadeIn>
+            <div style={{ textAlign: 'center'  }}>
+              <Image
+                style={{ marginTop: 50, marginBottom: -65  }}
+                src={peekyMonster}
+                width={118}
+                height={132}
+                alt='peeky monster'
+              />
+            </div>
 
-          <Card>
-            <h1 className='text-medium'>The sticker packs is ready!</h1>
-            <p>
-              We&apos;ve sent you a <b className='text-900'>4 digit code</b> please enter it below to confirm subscription!
-            </p>
+            <Card>
+              <h1 className='text-medium'>The sticker packs is ready!</h1>
+              <p>
+                We&apos;ve sent you a <b className='text-900'>4 digit code</b> please enter it below to confirm subscription!
+              </p>
 
-            <PinVerification />
-          </Card>
+              <PinVerification />
+            </Card>
+          </FadeIn>
 
           <Stickers />
 
