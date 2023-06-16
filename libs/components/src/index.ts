@@ -9,3 +9,4 @@ export * from './lib/Header/Header';
 export * from './lib/Footer/Footer';
 export * from './lib/Reviews/Reviews';
 export * from './lib/Stickers/Stickers';
+export * from './lib/DynamicBackground/DynamicBackground';

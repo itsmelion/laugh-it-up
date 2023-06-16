@@ -2,7 +2,7 @@ import './reset.css';
 import './global.css';
 import { Roboto } from 'next/font/google'
 
-import { Footer } from '@laugh-it-up/components';
+import { DynamicBackground, Footer } from '@laugh-it-up/components';
 
 const roboto = Roboto({
   weight: ['400', '500', '700', '900'],
@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body>
+        <DynamicBackground />
         {children}
         <Footer />
       </body>

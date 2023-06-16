@@ -65,6 +65,7 @@ pre {
 
 .wrapper {
   width: 100%;
+  position: relative;
 }
 .container {
   margin-left: auto;
