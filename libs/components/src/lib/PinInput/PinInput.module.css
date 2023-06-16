@@ -10,10 +10,22 @@
 }
 
 .input {
-  /* appearance: none; */
+  appearance: none;
   /* background-color: transparent; */
   flex: none;
   padding: 0.3em;
   border: #707070 solid .15rem;
   border-radius: 0.4em;
+  width: 2.25em;
+  height: 2.25em;
+  text-align: center;
+}
+
+/* Hides arrows on input[number] */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
