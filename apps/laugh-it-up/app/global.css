@@ -126,6 +126,11 @@ p, .text-md {
   margin-top: 1rem;
 }
 
+.mt-2 {
+  margin-top: 2rem;
+}
+
+
 .gap-2 {
   display: flex;
   flex-direction: column;
@@ -134,4 +139,5 @@ p, .text-md {
 
 .form-error-message {
   color: #FA3333;
+  margin: 0.5em;
 }

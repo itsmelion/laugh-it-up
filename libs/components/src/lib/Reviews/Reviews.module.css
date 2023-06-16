@@ -10,10 +10,10 @@
 }
 
 .reviewWrapper {
-  flex: none;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  flex: 1;
 }
 
 .avatar {

@@ -31,6 +31,8 @@ export const PhoneForm = () => {
       })}
       className={styles.wrapper}>
       <p>Enter your number to get all the sticker packs.</p>
+      <div className='mt-1'/>
+
 
       <Controller
         name='phone'
@@ -62,6 +64,8 @@ export const PhoneForm = () => {
         errors={form.formState.errors}
         as={<p className='form-error-message'/>}
       />
+
+      <div className='mt-2'/>
 
       <Button
         type='submit'

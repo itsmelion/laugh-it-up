@@ -41,4 +41,4 @@ export const CuteMonsters = () => {
   );
 }
 
-export const MonstersOffset = <div style={{ marginBottom: 60 }}/>
+export const MonstersOffset = <div style={{ marginBottom: 50 }}/>
