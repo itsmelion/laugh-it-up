@@ -11,7 +11,7 @@ type ResponseDTO = {
 
 type PayloadDTO = {
   /* 4 digits */
-  pin: string;
+  pin: string | number;
   // UUID
   user_id: string;
   // string: 2 letters code
@@ -19,7 +19,7 @@ type PayloadDTO = {
 }
 
 export async function verifyPin(payload: PayloadDTO) {
-  const response = await fetch(`${HOST}/${VERSION}/verify-pin`, {
+  const response = await fetch(`${HOST}/api/${VERSION}/verify-pin`, {
     body: JSON.stringify(payload),
     method: 'POST',
     mode: "cors",

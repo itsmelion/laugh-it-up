@@ -19,12 +19,12 @@ export const PhoneForm = () => {
     <form
       onSubmit={form.handleSubmit(async (data) => {
         const { phone } = data;
-        const number = parsePhoneNumber(phone);
+        const {number, country } = parsePhoneNumber(phone);
 
         await verifyPhoneRequest.execute({
-          msisdn: number.formatInternational(),
+          msisdn: number,
           user_id: 'UUID-CHRIS-LION',
-          country: number.country || 'NL',
+          country: country || 'NL',
         });
 
         route.push(`/${params.category}/verify`);

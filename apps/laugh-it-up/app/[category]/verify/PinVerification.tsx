@@ -14,7 +14,7 @@ export function PinVerification() {
         className='gap-2 mt-1'
         onSubmit={form.handleSubmit((data) => {
           return verifyPin.execute({
-            pin: data.pin,
+            pin: parseInt(data.pin, 10),
             user_id: 'UUID-CHRIS-LION',
             country: 'NL',
           });

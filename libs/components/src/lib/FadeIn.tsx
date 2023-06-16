@@ -1,7 +1,7 @@
 'use client'
-import { motion } from 'framer-motion';
+import { MotionProps, motion } from 'framer-motion';
 
-export function FadeIn(props) {
+export function FadeIn(props: MotionProps) {
   return (
     <motion.div
       initial={{ y: -50, opacity: 0,  }}

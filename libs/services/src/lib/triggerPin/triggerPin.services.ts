@@ -21,7 +21,7 @@ type PayloadDTO = {
 }
 
 export async function triggerPin(payload: PayloadDTO) {
-  const response = await fetch(`${HOST}/${VERSION}/trigger-pin`, {
+  const response = await fetch(`${HOST}/api/${VERSION}/trigger-pin`, {
     body: JSON.stringify(payload),
     method: 'POST',
     mode: "cors",

@@ -1,7 +1,13 @@
 import { triggerPin } from './triggerPin.services';
 
-describe('services', () => {
-  it('should work', () => {
-    expect(triggerPin({ msisdn: '+316666666' })).toEqual('ok');
+describe('Trigger Pin ', () => {
+  it('should work', async () => {
+    const response = await triggerPin({
+      user_id: 'SOME_UUID',
+      country: 'NL',
+      msisdn: '+31682135435',
+    });
+
+    expect(response?.success).toEqual(true);
   });
 });

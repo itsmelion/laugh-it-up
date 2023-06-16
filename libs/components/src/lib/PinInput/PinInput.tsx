@@ -4,7 +4,7 @@ import { useController, UseControllerProps } from 'react-hook-form';
 
 import styles from './PinInput.module.css';
 
-export const PinInput = forwardRef<HTMLInputElement, UseControllerProps<{ pin: string }>>((props) => {
+export const PinInput = forwardRef<HTMLInputElement, UseControllerProps<{ pin: string }>>((props, _) => {
   const { field } = useController(props);
   const [pin, setPin] = useState<string[]>(field.value?.split('') || new Array(4).fill(''));
   const inputRefs = useRef<HTMLInputElement[]>([]);
